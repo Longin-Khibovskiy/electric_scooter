@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Курсовая</title>
+    <link rel="stylesheet" href="./css/output.css"/>
+    <script src="./js/main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+<!--Header-->
+<header class="flex text-[#F1F1F1] lg:px-[50px] px-[140px] py-[56px]">
+    <svg class="aspect-video" width="60" height="39" viewBox="0 0 60 39" fill="none"
+         xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M59.3689 0C59.7139 0 60 0.281934 60 0.629353V38.3743C60 38.7162 59.7139 39 59.3689 39H51.2391C50.8904 39 50.6079 38.7162 50.6079 38.3743V0.629353C50.6079 0.281934 50.8904 0 51.2391 0H59.3689ZM24.0926 0C30.2253 0 36.6369 0.285574 39.798 3.50511C42.909 6.6736 43.2446 12.9812 43.2573 19.1066L43.2576 38.3743C43.2576 38.7162 42.9752 39 42.6265 39H34.5003C34.1516 39 33.8673 38.7162 33.8673 38.3743V18.7751C33.8584 15.3537 33.6653 11.8377 31.931 10.0679C30.4381 8.5454 27.6524 8.19617 24.7559 8.12341H10.0232C9.67639 8.12341 9.39388 8.40716 9.39388 8.74912V38.3743C9.39388 38.7162 9.10782 39 8.76095 39H0.627567C0.280704 39 0 38.7162 0 38.3743V0.629353C0 0.281934 0.280704 0 0.627567 0H24.0926ZM25.9128 15.0318C26.2578 15.0318 26.5385 15.3137 26.5385 15.6575V38.3743C26.5385 38.7162 26.2578 39 25.9128 39H17.3735C17.0231 39 16.7406 38.7162 16.7406 38.3743V15.6575C16.7406 15.3137 17.0231 15.0318 17.3735 15.0318H25.9128Z"
+              fill="#F1F1F1"/>
+    </svg>
+    <!--Menu Button-->
+    <div class="hidden md:flex w-full justify-end items-end z-[102]" id="burger">
+        <input id="checkbox2" type="checkbox">
+        <label class="toggle toggle2" id="mob_menu" for="checkbox2">
+            <div id="bar4" class="bars"></div>
+            <div id="bar5" class="bars"></div>
+            <div id="bar6" class="bars"></div>
+        </label>
+    </div>
+    <div class="fixed top-0 right-0 bottom-0 bg-[url('../assets/bg.png')] w-[40%] z-[101] hidden" id="mob_menu_active">
+        <div class="flex flex-col w-full justify-center items-center h-full gap-[40px]">
+            <a href="#"><p class="h4">О продукте</p></a>
+            <a href="#"><p class="h4">Внешний вид</p></a>
+            <a href="#"><p class="h4">Безопасность</p></a>
+            <a href="#"><p class="h4">Отзывы</p></a>
+            <a href="#"><p class="h4">FAQ</p></a>
+        </div>
+    </div>
+    <div class="md:hidden w-full">
+        <div class="w-full flex justify-between items-center pl-[100px]">
+            <div class="flex text-sm font-[100] leading-[150%] tracking-[0.5px] gap-10">
+                <a href="#"><p class="p">О продукте</p></a>
+                <a href="#"><p class="p">Внешний вид</p></a>
+                <a href="#"><p class="p">Безопасность</p></a>
+                <a href="#"><p class="p">Отзывы</p></a>
+                <a href="#"><p class="p">FAQ</p></a>
+            </div>
+            <div class="bg-white text-black right-0 inline-flex px-[35px] py-[15px] items-start gap-[10px] rounded-[65px] border-0">
+                <button class="p">Купить</button>
+            </div>
+        </div>
+    </div>
+</header>
+<!--Hero-->
+<section class="sm:text-center">
+    <h1 class="mx-[140px] lg:mx-[50px] text-[#F1F1F1] h1">
+        Стильный электросамокат с мощным
+        аккумулятором
+    </h1>
+    <h3 class="mx-[140px] lg:mx-[50px] my-[30px] text-[#FF4C0D] h3">Улучшенная
+        производительность <br> для дальних путешествий. <br> Работает так же просто,
+        <br> как и выглядит.</h3>
+    <img src="./assets/hero_white_min.png" alt="" id="white_min" class="hidden sm:block">
+    <img src="assets/hero_black_min.png" alt="" id="black_min" class="hidden sm:hidden">
+    <div class="sm:flex sm:flex-col sm:justify-center sm:items-center">
+        <input id="checkbox_toggle" type="checkbox" class="check">
+        <div class="checkbox lg:mx-[50px]">
+            <label class="slide" for="checkbox_toggle">
+                <label class="toggle" for="checkbox_toggle"></label>
+                <label class="text lg:pl-0 xs:pl-[3px] p" for="checkbox_toggle">Белый</label>
+                <label class="text p" for="checkbox_toggle">Черный</label>
+            </label>
+        </div>
+    </div>
+    <img src="./assets/Байк.png" alt="" id="white_bike" class="absolute top-0 right-0 z-[-1] sm:hidden aspect-auto">
+    <img src="./assets/black_bike.png" id="black_bike" alt="" class="absolute top-0 right-0 z-[-1] sm:hidden hidden aspect-auto">
+</section>
+<!--Battery-->
+<div class="flex justify-center items-center w-full px-[10vw]">
+    <section class="lg:mx-[50px] max-w-[1400px]">
+        <h2 class="mt-[250px] lg:mt-[100px] mb-7 text-[#F1F1F1] h2">Мощная батарея
+            и экономичный
+            расход <br> заряда позволяют преодолевать <br> расстояния до
+            45 км</h2>
+        <div class="grid grid-cols-3 lg:grid-cols-1">
+            <h4 class="battery-h4 lg:text-[#FF4C0D] text-white lg:w-[400px]">Три режима скорости</h4>
+            <p class="battery-p hidden lg:flex text-white">Три режима езды позволяют почуствовать себя
+                комфортно в любой ситуации. Режим «S»
+                увеличитвает скорость, если опаздываете на работу. Во время прогулки по парку активируйте режим «D».
+                Включите режим «Пешеход», когда двигаетесь по оживлённой улице.</p>
+            <img src="./assets/lg_speed.png" alt="" class="w-full hidden lg:block">
+            <h4 class="battery-h4 lg:text-[#FF4C0D] lg:w-[400px] lg:border-b-[#FF4C0D] lg:mt-6">Система восстановления
+                энергии</h4>
+            <p class="battery-p hidden lg:flex text-white">Во время торможения и движения по инерции система
+                преобразовывает кинетическую энергию
+                в
+                электрическую, позволяя увеличить общий запас хода самоката.</p>
+            <img src="./assets/lg_speed_2.png" alt="" class="w-full hidden lg:block">
+            <h4 class="battery-h4 lg:text-[#FF4C0D] lg:w-[400px] lg:border-b-[#FF4C0D] lg:mt-6">Мощная батарея</h4>
+            <p class="battery-p hidden lg:flex text-white">Три режима езды позволяют почуствовать себя комфортно в
+                любой ситуации. Режим «S»
+                увеличитвает скорость, если опаздываете на работу. Во время прогулки по парку активируйте режим «D».
+                Включите режим «Пешеход», когда двигаетесь по оживлённой улице.</p>
+            <img src="./assets/lg_speed_3.png" alt="" class="w-full hidden lg:block">
+            <p class="battery-p lg:hidden text-white">Три режима езды позволяют почуствовать себя комфортно в любой
+                ситуации. Режим
+                «S»
+                увеличитвает скорость, если опаздываете на работу. Во время прогулки по парку активируйте режим «D».
+                Включите режим «Пешеход», когда двигаетесь по оживлённой улице.</p>
+            <p class="battery-p lg:hidden">Во время торможения и движения по инерции система преобразовывает
+                кинетическую энергию
+                в
+                электрическую, позволяя увеличить общий запас хода самоката.</p>
+            <p class="battery-p lg:hidden">Самокат оснащен аккумулятором емкостью 12 800 мАч. Это позволяет преодолевать
+                расстояния до
+                45 км без подзарядки.</p>
+        </div>
+        <div class="grid grid-cols-3 gap-[55px]">
+            <img src="assets/Rectangle23.png" class="mt-[15px] col-span-2 rounded-[15px] lg:hidden">
+            <img src="assets/Rectangle24.png" class="mt-[15px] rounded-[15px] lg:hidden">
+        </div>
+    </section>
+</div>
+<!--Speed-->
+<section
+        class="bg-[url('../assets/image205.png')] mt-[10vh] bg-cover bg-no-repeat px-[140px] lg:px-[50px] py-[100px] bg-center">
+    <div class="w-[50%] flex flex-col">
+        <svg width="60" height="39" viewBox="0 0 60 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M59.3689 0C59.7139 0 60 0.281934 60 0.629353V38.3743C60 38.7162 59.7139 39 59.3689 39H51.2391C50.8904 39 50.6079 38.7162 50.6079 38.3743V0.629353C50.6079 0.281934 50.8904 0 51.2391 0H59.3689ZM24.0926 0C30.2253 0 36.6369 0.285574 39.798 3.50511C42.909 6.6736 43.2446 12.9812 43.2573 19.1066L43.2576 38.3743C43.2576 38.7162 42.9752 39 42.6265 39H34.5003C34.1516 39 33.8673 38.7162 33.8673 38.3743V18.7751C33.8584 15.3537 33.6653 11.8377 31.931 10.0679C30.4381 8.5454 27.6524 8.19617 24.7559 8.12341H10.0232C9.67639 8.12341 9.39388 8.40716 9.39388 8.74912V38.3743C9.39388 38.7162 9.10782 39 8.76095 39H0.627567C0.280704 39 0 38.7162 0 38.3743V0.629353C0 0.281934 0.280704 0 0.627567 0H24.0926ZM25.9128 15.0318C26.2578 15.0318 26.5385 15.3137 26.5385 15.6575V38.3743C26.5385 38.7162 26.2578 39 25.9128 39H17.3735C17.0231 39 16.7406 38.7162 16.7406 38.3743V15.6575C16.7406 15.3137 17.0231 15.0318 17.3735 15.0318H25.9128Z"
+                  fill="#F1F1F1"/>
+        </svg>
+        <h2 class="pt-[200px] text-[#F1F1F1] h2">
+            Высокая скорость передвижения
+        </h2>
+        <p class="pt-5 text-[#F1F1F1] p">
+            Двигатель мощностью до 600 Вт <br> позволяет развивать скорость до 25 км/ч.
+        </p>
+    </div>
+</section>
+<!--Design-->
+<img src="./assets/Path1.png" alt="" class="flex absolute right-0">
+<div class="flex justify-center items-center w-full">
+    <section class="mx-[140px] lg:mx-[50px] mt-[140px] max-w-[1400px]">
+        <h2 class="h2 text-[#FF4C0D]">Лаконичный современный дизайн, <br> в котором нет ничего лишнего</h2>
+        <div class="flex items-center justify-center">
+            <div class="grid grid-cols-2 lg:grid-cols-1 my-[60px] gap-[40px]">
+                <div class="lg:flex lg:flex-col lg:justify-center lg:items-center">
+                    <div class="rounded-[15px] pb-[20px] design-img max-w-[580px] h-[508px]">
+                        <img src="./assets/Rectangle91.png" alt="" class="">
+                        <div class="flex flex-col justify-end h-full">
+                            <div class="px-[40px] text-[#F1F1F1] h-full">
+                                <h4 class="h4">Минималистичный дизайн</h4>
+                                <p class="pt-5 p">
+                                    Удобно расположенные элементы управления. Отображение типов данных в реальном
+                                    времени:
+                                    скорость,
+                                    режим, заряд аккумулятора, состояние блокировки и другая информация.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:flex lg:flex-col lg:justify-center lg:items-center">
+                    <div class="max-w-[580px] h-[508px] lg:h-[550px] rounded-[15px] bg-[url('../assets/image198.png')] flex flex-col justify-end px-[40px] pb-5 text-[#F1F1F1]">
+                        <h4 class="h4">
+                            Удобная панель управления
+                        </h4>
+                        <p class="pt-[20px] p">
+                            Удобно расположенные элементы управления. Отображение 8 типов данных в реальном времени:
+                            скорость,
+                            режим, заряд аккумулятора, состояние блокировки и другая информация.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<!--Safety-->
+<div class="flex justify-center items-center w-full  px-[10vw]">
+    <section class="mt-12 lg:mx-[50px] max-w-[1400px]">
+        <h2 class="h2 text-[#FF4C0D]">Заботится о вашей безопасности</h2>
+        <div class="grid grid-cols-4 lg:grid-cols-1 mt-12">
+            <h4 class="h4 text-[#F1F1F1] lg:text-[#FF4C0D] border-b-[3px] lg:w-[400px] border-[#FF4C0D] px-[10px] h-[50px] flex items-center">
+                Яркие ходовые огни
+            </h4>
+            <p class="p px-[10px] mt-6 text-[#F1F1F1] hidden lg:block">Продуманный угол рассеивания света позволяет
+                сохранять хорошую видимость, не ослепляя других участников движения.</p>
+            <div class="hidden lg:block">
+                <div class="flex justify-center items-center mt-6 ">
+                    <img src="./assets/safety2.png" alt="" class="rounded-[15px] w-full">
+                </div>
+            </div>
+            <h4 class="h4 text-[#919191] border-b-[3px] border-[#919191] px-[10px] h-[50px] lg:text-[#FF4C0D] lg:mt-6 lg:border-[#FF4C0D] flex items-center">
+                Двойная тормозная
+                система
+            </h4>
+            <p class="p px-[10px] mt-6 text-white hidden lg:block">При нажатии наручку тормоза системы переднего и
+                заднего
+                колеса активируются последовательно, сокращая тормозной путь и обеспечивая безопасную и плавную
+                остановку.</p>
+            <div class="hidden lg:block">
+                <div class="flex justify-center items-center mt-6 ">
+                    <img src="./assets/system.png" alt="" class="rounded-[15px] w-full">
+                </div>
+            </div>
+            <h4 class="h4 text-[#919191] border-b-[3px] border-[#919191] px-[10px] h-[50px] lg:text-[#FF4C0D] lg:mt-6 lg:border-[#FF4C0D] flex items-center">
+                Яркая задняя фара</h4>
+            <p class="p px-[10px] mt-6 text-white hidden lg:block">При включении ходовых огней задняя фара включается
+                автоматически.
+                При
+                нажатии на ручку тормоза она начинает мигать, предупреждая других участников движения.
+            </p>
+            <div class="hidden lg:block">
+                <div class="flex justify-center items-center mt-6 ">
+                    <img src="./assets/back.png" alt="" class="rounded-[15px] w-full">
+                </div>
+            </div>
+            <h4 class="h4 text-[#919191] border-b-[3px] border-[#919191] px-[10px] h-[50px] lg:text-[#FF4C0D] lg:mt-6 lg:border-[#FF4C0D] flex items-center">
+                Отражатели спереди, сбоку и сзади</h4>
+            <p class="p px-[10px] mt-6 text-white  hidden lg:block">Улучшенные отражатели, размещенные с четырех сторон,
+                делают вашу
+                поездку в темное время суток безопаснее.</p>
+            <div class="hidden lg:block">
+                <div class="flex justify-center items-center mt-6 ">
+                    <img src="./assets/otr.png" alt="" class="rounded-[15px] w-full">
+                </div>
+            </div>
+            <p class="p px-[10px] mt-6 text-[#F1F1F1] lg:hidden">Продуманный угол рассеивания света позволяет сохранять
+                хорошую
+                видимость,
+                не
+                ослепляя других участников движения.</p>
+            <p class="p px-[10px] mt-6 text-[#919191] lg:hidden">При нажатии наручку тормоза системы переднего и заднего
+                колеса
+                активируются последовательно, сокращая тормозной путь и обеспечивая безопасную и плавную остановку.</p>
+            <p class="p px-[10px] mt-6 text-[#919191] lg:hidden">При включении ходовых огней задняя фара включается
+                автоматически.
+                При
+                нажатии на ручку тормоза она начинает мигать, предупреждая других участников движения.
+            </p>
+            <p class="p px-[10px] mt-6 text-[#919191] lg:hidden">Улучшенные отражатели, размещенные с четырех сторон,
+                делают вашу
+                поездку в темное время суток безопаснее.</p>
+        </div>
+        <div class=" grid grid-cols-3 mt-12 gap-[50px]">
+            <img src="./assets/safety2.png" alt="" class="col-span-2 rounded-[15px] lg:hidden">
+            <img src="./assets/safety1.png" alt="" class="rounded-[15px] lg:hidden">
+        </div>
+    </section>
+</div>
+<!--Mobile App-->
+<div class="flex justify-center items-center w-full">
+    <section class="mt-24 mx-[140px] lg:mx-[50px] max-w-[1400px]">
+        <div class="grid grid-cols-2">
+            <div class="flex justify-center items-center flex-col gap-[40px]">
+                <h2 class="h2 text-[#FF4C0D]">Мобильное приложение Mi Home</h2>
+                <p class="p text-[#F1F1F1]">Подключите самокат к мобильному приложению Mi Home и используйте его для
+                    блокировки
+                    и
+                    разблокировки самоката, а так же просмотра основных данных: пробег, скорость, уровень заряда
+                    аккумулятора.</p>
+                <div class="grid grid-cols-4 w-full gap-3">
+                    <img src="./assets/app_store.png" alt="" class="cursor-pointer">
+                    <img src="./assets/google_play.png" alt="" class="h-full cursor-pointer">
+                </div>
+            </div>
+            <div class="flex justify-center items-end"><img src="./assets/phone.png" alt="" class="aspect-auto"></div>
+        </div>
+    </section>
+</div>
+<!--About-->
+<section class=" px-[140px] lg:px-[50px] bg-[url('../assets/about.png')] bg-cover bg-no-repeat bg-center py-[100px]">
+    <img src="./assets/orange_icon.png" height="39" width="60"/>
+    <h2 class="h2 text-[#FF4C0D] mt-[147px]">О бренде Xiaomi</h2>
+    <div class="mt-[30px]">
+        <p class="p text-black max-w-[380px]">Компания Xiaomi была основана предпринимателем Лей Цзюнем в 2010 году под
+            девизом -
+            «Инновации для всех».</p>
+        <p class="p text-black max-w-[380px] mt-5">Мы верим, что высококачественные продукты и передовые технологии
+            должны быть доступны
+            каждому.</p>
+    </div>
+</section>
+<!--reviews-->
+<img src="./assets/Path1.png" alt="" class="flex absolute right-0">
+<section></section>
+<!--Questions-->
+<section class="mt-[120px] mx-[140px] lg:mx-[50px]">
+    <div class="grid grid-cols-5 lg:grid-cols-1">
+        <div class="col-span-2 flex flex-col gap-[30px]">
+            <h2 class="h2 text-[#FF4C0D]">Часто задаваемые вопросы</h2>
+            <div class="pr-[100px]">
+                <p class="p text-[#F1F1F1]">Все ваши часто задаваемые вопросы о электросамокате Mi Scooter Pro 2.
+                </p>
+                <p class="p text-[#F1F1F1] mt-5">Если у вас есть собственный вопрос - задайте его через форму
+                    обратной
+                    связи.</p>
+            </div>
+            <div class="bg-white text-black px-[35px] xs:px-[10px] py-[15px] gap-[10px] rounded-[65px] border-0 w-[200px] lg:w-[20vw] flex justify-center">
+                <button>Задать вопрос</button>
+            </div>
+        </div>
+        <div class="col-span-3 flex flex-col items-start gap-10 lg:mt-12">
+            <div class="flex flex-col items-start gap-[15px] self-stretch">
+                <h4 class="h4 text-[#F1F1F1]">На него нужны права категории M?</h4>
+                <div class="w-[100px] h-[3px] bg-[#FF4C0D]"></div>
+                <p class="p text-[#F1F1F1]">Продуманный угол рассеивания света позволяет сохранять хорошую видимость, не
+                    ослепляя других участников движения.</p>
+            </div>
+            <div class="flex flex-col items-start gap-[15px] self-stretch">
+                <h4 class="h4 text-[#F1F1F1]">У меня вес 135 кг, выдержит ли этот самокат?</h4>
+                <div class="w-[100px] h-[3px] bg-[#FF4C0D]"></div>
+                <p class="p text-[#F1F1F1]">Самокат определенно выдержит и будет ехать, но не с максимальной
+                    скоростью.</p>
+            </div>
+            <div class="flex flex-col items-start gap-[15px] self-stretch">
+                <h4 class="h4 text-[#F1F1F1]">Есть ли влагозащита?</h4>
+                <div class="w-[100px] h-[3px] bg-[#FF4C0D]"></div>
+                <p class="p text-[#F1F1F1]">Электросамокат имеет степень защиты IP54. Он защищен от попадания пыли и
+                    брызг, падающих в любом направлении. Погружение в воду может привести к поломке. </p>
+            </div>
+            <div class="flex flex-col items-start gap-[15px] self-stretch">
+                <h4 class="h4 text-[#F1F1F1]">Это версия для Китая или Европы?</h4>
+                <div class="w-[100px] h-[3px] bg-[#FF4C0D]"></div>
+                <p class="p text-[#F1F1F1]">Это Европейская версия, со всеми обновлениями и евро-вилкой.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Prod-->
+<div class="flex justify-center items-center w-full">
+    <img src="./assets/Байк_last.png" alt="" class="absolute xlg:right-0 ml-[300px] lg:hidden xlg:ml-0">
+    <img src="./assets/Байк_last.png" alt="" class="absolute xlg:right-0 w-[70vw] hidden lg:block xs:hidden xlg:ml-0">
+    <section class="mx-[140px] lg:mx-[50px] mt-[120px] max-w-[1440px]">
+        <div class="prod px-[60px] py-[60px]">
+            <div class="grid grid-cols-2 xs:justify-center xs:items-center xs:text-center xs:grid-cols-1">
+                <div>
+                    <h2 class="h2 text-white">Mi Electric Scooter Pro 2</h2>
+                    <h3 class="h3 text-[#FF4C0D] mt-6">54 990 ₽</h3>
+                    <div class="xs:flex xs:justify-center xs:items-center">
+                        <input id="checkbox_toggle_1" type="checkbox" class="check">
+                        <div class="checkbox mx-0 my-[30px]">
+                            <label class="slide" for="checkbox_toggle_1">
+                                <label class="toggle" for="checkbox_toggle_1"></label>
+                                <label class="text" for="checkbox_toggle_1">Белый</label>
+                                <label class="text" for="checkbox_toggle_1">Черный</label>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="bg-[#FF4C0D] mt-[125px] lg:mt-[70px] text-white inline-flex px-[35px] py-[15px] items-end gap-[10px] rounded-[65px] border-0">
+                        <button>Купить</button>
+                    </div>
+                </div>
+                <div class="flex justify-end items-start lg:hidden">
+                    <div class="flex flex-col text-white">
+                        <h4 class="h4 mb-5">Комплект поставки</h4>
+                        <p>Адаптер питания</p>
+                        <p>Шестигранный ключ</p>
+                        <p>Удлинитель для насоса</p>
+                        <p>Винты x 5 шт.</p>
+                        <p>Запасная шина</p>
+                        <p>Руководство пользователя</p>
+                        <p>Буклет с информацией</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</div>
+<!--Footer-->
+<footer class="px-[140px] lg:px-[50px] bg-[#141414] grid grid-cols-2 md:grid-cols-1 mt-6">
+    <div class="my-[60px] md:my-[20px] text-white flex flex-col gap-[20px] md:justify-center md:items-center">
+        <p class="p">© 2010 - 2021 Xiaomi.</p>
+        <p class="p">Все права защищены.</p>
+    </div>
+    <div class="my-[60px] md:my-0 md:mb-[20px] text-white flex flex-col gap-[20px] items-end md:justify-center md:items-center">
+        <p class="p">8 800 775 66 15</p>
+        <p class="p">Часы работы с 9:00 до 20:00 МСК, Пн. – Пт.</p>
+    </div>
+</footer>
+</body>
+</html>
